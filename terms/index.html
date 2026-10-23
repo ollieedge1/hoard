@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terms of Use — Hoard</title>
+<meta name="description" content="The terms for using Hoard and Hoard Pro: information not advice, how subscriptions renew and how to cancel.">
+<link rel="canonical" href="https://hoardapp.co.uk/terms">
+<meta name="theme-color" content="#0E0F1A">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#0E0F1A; --bench:#171929; --grain:#2A2D45; --linen:#F2F2F5; --muted:#A1A3B8;
+  --accent:#8B97FF; --ink:#0B0B14;
+  --display:"Bricolage Grotesque",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --body:"Nunito Sans",-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,sans-serif;
+  --wrap:1100px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--night);color:var(--linen);font:17px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:8px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+
+/* nav: same floating pill as the home page */
+.nav{position:fixed;top:16px;left:0;right:0;z-index:50;padding:0 16px}
+.nav-inner{max-width:var(--wrap);margin:0 auto;display:flex;align-items:center;gap:24px;
+  padding:10px 10px 10px 14px;border-radius:999px;border:1px solid var(--grain);
+  background:rgba(23,25,41,.72);backdrop-filter:blur(18px) saturate(1.3);-webkit-backdrop-filter:blur(18px) saturate(1.3)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:700 17px var(--display)}
+.brand .mark{width:34px;height:34px;border-radius:9px;background:var(--accent);display:grid;place-items:center}
+.brand .mark svg{width:20px;height:20px}
+.nav-links{display:flex;gap:28px;list-style:none;margin:0 auto}
+.nav-links a{text-decoration:none;font-size:15px;color:var(--linen);opacity:.85}
+.nav-links a:hover{opacity:1}
+.dl{display:inline-flex;align-items:center;gap:8px;text-decoration:none;background:var(--linen);color:var(--ink);
+  font:700 15px var(--body);padding:10px 18px 10px 14px;border-radius:999px;white-space:nowrap;transition:background .15s}
+.dl svg{width:18px;height:18px;fill:currentColor;margin-top:-2px}
+.dl:hover{background:#fff}
+
+/* legal document */
+.doc{max-width:740px;margin:0 auto;padding:150px 24px 90px}
+.eyebrow{font:700 13px var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+.doc h1{font:800 clamp(44px,7vw,68px)/.98 var(--display);letter-spacing:-.025em;margin-bottom:16px}
+.updated{color:var(--muted);font-size:15px;margin-bottom:36px}
+.short{background:var(--bench);border:1px solid var(--grain);border-radius:24px;padding:26px 28px;margin-bottom:44px}
+.short h2{font:700 20px var(--display);margin:0 0 14px}
+.short ul{list-style:none;display:grid;gap:12px}
+.short li{position:relative;padding-left:32px}
+.short li::before{content:"";position:absolute;left:0;top:3px;width:20px;height:20px;border-radius:50%;background:var(--accent)}
+.short li::after{content:"";position:absolute;left:7px;top:7px;width:5px;height:9px;border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:rotate(45deg)}
+.toc{margin:0 0 44px;padding:0 0 0 2px;list-style:none;columns:2;column-gap:28px;font-size:15px}
+.toc li{margin-bottom:8px;break-inside:avoid}
+.toc a{color:var(--muted);text-decoration:none}
+.toc a:hover{color:var(--linen)}
+.doc section{padding-top:8px;margin-bottom:34px;scroll-margin-top:110px}
+.doc h2{font:700 25px/1.2 var(--display);letter-spacing:-.01em;margin-bottom:12px}
+.doc h3{font:700 18px var(--body);margin:20px 0 6px}
+.doc p,.doc ul,.doc ol{color:#D6D7E2;margin-bottom:14px}
+.doc ul,.doc ol{padding-left:22px}
+.doc li{margin-bottom:6px}
+.doc li::marker{color:var(--accent)}
+.doc strong{color:var(--linen)}
+.doc a{color:var(--accent);text-underline-offset:3px}
+.doc a:hover{color:#B4BCFF}
+.note{border-left:3px solid var(--accent);padding:4px 0 4px 18px;margin:18px 0}
+.contact{background:var(--bench);border:1px solid var(--grain);border-radius:24px;padding:24px 28px;margin-top:10px}
+.contact p{margin:0}
+
+footer{border-top:1px solid var(--grain);padding:34px 0 44px;font-size:14px;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:18px 28px}
+footer ul{display:flex;flex-wrap:wrap;gap:10px 24px;list-style:none;margin-left:auto}
+footer a{text-decoration:none}
+footer a:hover,footer a[aria-current]{color:var(--linen)}
+
+@media (max-width:720px){
+  .nav-links{display:none}
+  .nav-inner{justify-content:space-between}
+  .doc{padding-top:120px}
+  .toc{columns:1}
+  .short,.contact{padding:22px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="apple" viewBox="0 0 24 24"><path d="M16.37 1.43c0 1.14-.5 2.27-1.18 3.08-.74.9-1.99 1.57-2.99 1.57-.12 0-.23-.02-.3-.03-.01-.06-.04-.22-.04-.39 0-1.15.57-2.27 1.2-2.98.81-.94 2.15-1.64 3.25-1.68.03.13.06.28.06.43zm4.56 15.71c-.03.07-.46 1.58-1.52 3.12-.94 1.34-1.93 2.71-3.43 2.71-1.51 0-1.9-.88-3.63-.88-1.7 0-2.3.91-3.67.91-1.38 0-2.33-1.26-3.43-2.8C4 18.38 2.95 15.57 2.95 12.92c0-4.28 2.8-6.55 5.55-6.55 1.45 0 2.68.95 3.6.95.87 0 2.22-1.01 3.9-1.01.62 0 2.89.06 4.38 2.19-.13.09-2.38 1.37-2.38 4.19 0 3.26 2.85 4.42 2.95 4.45z"/></symbol>
+  <symbol id="coins" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="7" ry="2.6"/><path d="M5 6v4c0 1.4 3.1 2.6 7 2.6s7-1.2 7-2.6V6"/><path d="M5 10v4c0 1.4 3.1 2.6 7 2.6s7-1.2 7-2.6v-4"/><path d="M5 14v4c0 1.4 3.1 2.6 7 2.6s7-1.2 7-2.6v-4"/></g></symbol>
+</svg>
+
+<header class="nav">
+  <nav class="nav-inner" aria-label="Main">
+    <a class="brand" href="/"><span class="mark" style="color:var(--ink)"><svg aria-hidden="true"><use href="#coins"/></svg></span>Hoard</a>
+    <ul class="nav-links">
+      <li><a href="/#features">Features</a></li>
+      <li><a href="/#guides">Guides</a></li>
+      <li><a href="/#faq">Questions</a></li>
+      <li><a href="mailto:support@hoardapp.co.uk">Contact</a></li>
+    </ul>
+    <a class="dl" href="/#get"><svg aria-hidden="true"><use href="#apple"/></svg>Download</a>
+  </nav>
+</header>
+
+<main class="doc">
+  <p class="eyebrow">Terms of use</p>
+  <h1>The deal, in plain English</h1>
+  <p class="updated">Last updated 23 October 2026</p>
+
+  <div class="short">
+    <h2>The short version</h2>
+    <ul>
+      <li>Hoard gives you information and estimates. It isn't financial advice.</li>
+      <li>Check important figures against your payslip, pension statement or HMRC before acting on them.</li>
+      <li>Hoard Pro is optional. Subscriptions renew automatically until you cancel them in your Apple Account settings.</li>
+      <li>Apple handles all payments and refunds.</li>
+    </ul>
+  </div>
+
+  <ol class="toc" aria-label="Contents">
+    <li><a href="#about">About these terms</a></li>
+    <li><a href="#advice">Information, not advice</a></li>
+    <li><a href="#estimates">Estimates and accuracy</a></li>
+    <li><a href="#pro">Hoard Pro</a></li>
+    <li><a href="#subscriptions">Subscriptions and cancelling</a></li>
+    <li><a href="#refunds">Refunds</a></li>
+    <li><a href="#data">Your data</a></li>
+    <li><a href="#use">Using Hoard</a></li>
+    <li><a href="#links">Other websites</a></li>
+    <li><a href="#changes">Changes</a></li>
+    <li><a href="#liability">Our responsibility to you</a></li>
+    <li><a href="#law">Law</a></li>
+  </ol>
+
+  <section id="about">
+    <h2>About these terms</h2>
+    <p>These terms are between you and Hoard (“we”, “us”), and apply when you use the Hoard app for iPhone.</p>
+    <p>Your licence to use the app is granted under Apple's <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="noopener">Standard Licensed Application End User License Agreement</a>. These terms sit alongside it and explain how Hoard and Hoard Pro work. By downloading or using Hoard, you agree to both.</p>
+  </section>
+
+  <section id="advice">
+    <h2>Information, not advice</h2>
+    <p>Hoard gives general information, calculations and guidance to help you understand your pay, budget and pension and make your own decisions. <strong>It is not regulated financial advice</strong>, and nothing in the app, including your pal's chat answers, is a personal recommendation to buy, sell, transfer or change anything.</p>
+    <p>Hoard is not authorised or regulated by the Financial Conduct Authority.</p>
+    <p class="note">For free, impartial help, try <a href="https://www.moneyhelper.org.uk/en" rel="noopener">MoneyHelper</a>. If you're 50 or over and have a defined contribution pension, you can book a free <a href="https://www.moneyhelper.org.uk/en/pensions-and-retirement/pension-wise" rel="noopener">Pension Wise</a> appointment. For a personal recommendation, use a regulated financial adviser; you can check one on the <a href="https://register.fca.org.uk/" rel="noopener">FCA register</a>.</p>
+  </section>
+
+  <section id="estimates">
+    <h2>Estimates and accuracy</h2>
+    <p>Hoard's figures are estimates. They depend on:</p>
+    <ul>
+      <li>what you enter, and what the app reads from payslips and statements you scan</li>
+      <li>UK income tax and National Insurance rules for the current tax year, including Scottish income tax rates where they apply</li>
+      <li>assumptions about things nobody can know for certain, such as investment growth, inflation, your future pay and the State Pension</li>
+    </ul>
+    <p>Real outcomes will differ, and tax rules change. Scans can misread a figure, and chat answers are generated automatically and can be wrong. Please check anything important against your payslip, pension statement, your employer's payroll team or HMRC before you act on it, especially before changing your pension contributions, salary sacrifice or tax code, or taking money from a pension.</p>
+  </section>
+
+  <section id="pro">
+    <h2>Hoard Pro</h2>
+    <p>Much of Hoard is free. Hoard Pro unlocks extra features, which are described in the app before you buy. You can choose:</p>
+    <ul>
+      <li><strong>Monthly</strong> or <strong>Yearly</strong>: an auto-renewing subscription</li>
+      <li><strong>Lifetime</strong>: a single payment that unlocks Hoard Pro for as long as Hoard is available on the App Store, with nothing more to pay</li>
+    </ul>
+    <p>The price, in your currency, is shown in the app and by Apple before you confirm. Purchases are tied to your Apple Account, and you can restore them on another iPhone with <strong>Restore Purchases</strong> on the Hoard Pro screen.</p>
+  </section>
+
+  <section id="subscriptions">
+    <h2>Subscriptions and cancelling</h2>
+    <ul>
+      <li>Payment is charged to your Apple Account when you confirm the purchase.</li>
+      <li>Your subscription renews automatically at the end of each period unless you cancel at least 24 hours before it ends.</li>
+      <li>Your Apple Account is charged for the next period within the 24 hours before the current one ends.</li>
+      <li>To cancel or switch plans, open your iPhone's <strong>Settings</strong>, tap your name, then <strong>Subscriptions</strong>. Deleting the app doesn't cancel a subscription.</li>
+      <li>When you cancel, you keep Hoard Pro until the end of the period you've paid for.</li>
+      <li>If a subscription price goes up, Apple will tell you first and, where required, ask you to agree before you're charged the new price.</li>
+    </ul>
+  </section>
+
+  <section id="refunds">
+    <h2>Refunds</h2>
+    <p>Apple takes all payments, so refunds are handled by Apple. You can request one at <a href="https://reportaproblem.apple.com/" rel="noopener">reportaproblem.apple.com</a>. Nothing in these terms affects your statutory rights as a consumer.</p>
+  </section>
+
+  <section id="data">
+    <h2>Your data</h2>
+    <p>Hoard stores your figures on your iPhone and doesn't send them to us. Our <a href="/privacy">Privacy Policy</a> explains this in full.</p>
+    <p>Because there's no account or server, we can't recover your data for you. Keep iCloud Backup turned on if you want your figures to move to a new phone. Erasing your data in the app, or deleting the app, removes it from your iPhone.</p>
+  </section>
+
+  <section id="use">
+    <h2>Using Hoard</h2>
+    <p>Hoard is for your own personal use. Please don't copy, resell or try to reverse-engineer the app, or use it in a way that breaks the law. Apple's licence agreement, linked above, sets out the full rules.</p>
+  </section>
+
+  <section id="links">
+    <h2>Other websites</h2>
+    <p>Hoard links to services such as GOV.UK, HMRC, MoneyHelper and some pension providers. We include them because they may be useful, not as a recommendation, and we're not responsible for their content or what they offer. Their own terms apply.</p>
+  </section>
+
+  <section id="changes">
+    <h2>Changes</h2>
+    <p>We'll keep improving Hoard, which means features may change. If we change these terms, we'll update this page and the date at the top, and explain significant changes in the app's update notes. If a change significantly reduces what Hoard Pro includes, you can cancel your subscription.</p>
+  </section>
+
+  <section id="liability">
+    <h2>Our responsibility to you</h2>
+    <p>We build Hoard with reasonable care and skill, and we're responsible for loss you suffer that is a foreseeable result of us breaking these terms or failing to use reasonable care.</p>
+    <p>Because Hoard gives estimates rather than advice, we aren't responsible for losses that come from relying on a figure without checking it, except where the loss was caused by our failure to use reasonable care and skill. Hoard is for personal use, so we aren't responsible for business losses.</p>
+    <p>Nothing in these terms limits our liability for death or personal injury caused by our negligence, for fraud, or for anything else that the law doesn't allow us to limit.</p>
+  </section>
+
+  <section id="law">
+    <h2>Law</h2>
+    <p>These terms are governed by the law of England and Wales. If you live in Scotland or Northern Ireland, you can also bring a claim in your local courts.</p>
+  </section>
+
+  <div class="contact">
+    <p><strong>Questions?</strong> Email <a href="mailto:support@hoardapp.co.uk">support@hoardapp.co.uk</a> and a real person will reply.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> Hoard. Made in the UK.</span>
+    <ul>
+      <li><a href="/privacy">Privacy</a></li>
+      <li><a href="/terms" aria-current="page">Terms</a></li>
+      <li><a href="mailto:support@hoardapp.co.uk">support@hoardapp.co.uk</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>

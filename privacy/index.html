@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Hoard</title>
+<meta name="description" content="How Hoard handles your information: no account, no server, your figures stay on your iPhone. The only outside service is RevenueCat, for Hoard Pro purchases.">
+<link rel="canonical" href="https://hoardapp.co.uk/privacy">
+<meta name="theme-color" content="#0E0F1A">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#0E0F1A; --bench:#171929; --grain:#2A2D45; --linen:#F2F2F5; --muted:#A1A3B8;
+  --accent:#8B97FF; --ink:#0B0B14;
+  --display:"Bricolage Grotesque",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --body:"Nunito Sans",-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,sans-serif;
+  --wrap:1100px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--night);color:var(--linen);font:17px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:8px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+
+/* nav: same floating pill as the home page */
+.nav{position:fixed;top:16px;left:0;right:0;z-index:50;padding:0 16px}
+.nav-inner{max-width:var(--wrap);margin:0 auto;display:flex;align-items:center;gap:24px;
+  padding:10px 10px 10px 14px;border-radius:999px;border:1px solid var(--grain);
+  background:rgba(23,25,41,.72);backdrop-filter:blur(18px) saturate(1.3);-webkit-backdrop-filter:blur(18px) saturate(1.3)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:700 17px var(--display)}
+.brand .mark{width:34px;height:34px;border-radius:9px;background:var(--accent);display:grid;place-items:center}
+.brand .mark svg{width:20px;height:20px}
+.nav-links{display:flex;gap:28px;list-style:none;margin:0 auto}
+.nav-links a{text-decoration:none;font-size:15px;color:var(--linen);opacity:.85}
+.nav-links a:hover{opacity:1}
+.dl{display:inline-flex;align-items:center;gap:8px;text-decoration:none;background:var(--linen);color:var(--ink);
+  font:700 15px var(--body);padding:10px 18px 10px 14px;border-radius:999px;white-space:nowrap;transition:background .15s}
+.dl svg{width:18px;height:18px;fill:currentColor;margin-top:-2px}
+.dl:hover{background:#fff}
+
+/* legal document */
+.doc{max-width:740px;margin:0 auto;padding:150px 24px 90px}
+.eyebrow{font:700 13px var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+.doc h1{font:800 clamp(44px,7vw,68px)/.98 var(--display);letter-spacing:-.025em;margin-bottom:16px}
+.updated{color:var(--muted);font-size:15px;margin-bottom:36px}
+.short{background:var(--bench);border:1px solid var(--grain);border-radius:24px;padding:26px 28px;margin-bottom:44px}
+.short h2{font:700 20px var(--display);margin:0 0 14px}
+.short ul{list-style:none;display:grid;gap:12px}
+.short li{position:relative;padding-left:32px}
+.short li::before{content:"";position:absolute;left:0;top:3px;width:20px;height:20px;border-radius:50%;background:var(--accent)}
+.short li::after{content:"";position:absolute;left:7px;top:7px;width:5px;height:9px;border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:rotate(45deg)}
+.toc{margin:0 0 44px;padding:0 0 0 2px;list-style:none;columns:2;column-gap:28px;font-size:15px}
+.toc li{margin-bottom:8px;break-inside:avoid}
+.toc a{color:var(--muted);text-decoration:none}
+.toc a:hover{color:var(--linen)}
+.doc section{padding-top:8px;margin-bottom:34px;scroll-margin-top:110px}
+.doc h2{font:700 25px/1.2 var(--display);letter-spacing:-.01em;margin-bottom:12px}
+.doc h3{font:700 18px var(--body);margin:20px 0 6px}
+.doc p,.doc ul,.doc ol{color:#D6D7E2;margin-bottom:14px}
+.doc ul,.doc ol{padding-left:22px}
+.doc li{margin-bottom:6px}
+.doc li::marker{color:var(--accent)}
+.doc strong{color:var(--linen)}
+.doc a{color:var(--accent);text-underline-offset:3px}
+.doc a:hover{color:#B4BCFF}
+.note{border-left:3px solid var(--accent);padding:4px 0 4px 18px;margin:18px 0}
+.contact{background:var(--bench);border:1px solid var(--grain);border-radius:24px;padding:24px 28px;margin-top:10px}
+.contact p{margin:0}
+
+footer{border-top:1px solid var(--grain);padding:34px 0 44px;font-size:14px;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:18px 28px}
+footer ul{display:flex;flex-wrap:wrap;gap:10px 24px;list-style:none;margin-left:auto}
+footer a{text-decoration:none}
+footer a:hover,footer a[aria-current]{color:var(--linen)}
+
+@media (max-width:720px){
+  .nav-links{display:none}
+  .nav-inner{justify-content:space-between}
+  .doc{padding-top:120px}
+  .toc{columns:1}
+  .short,.contact{padding:22px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="apple" viewBox="0 0 24 24"><path d="M16.37 1.43c0 1.14-.5 2.27-1.18 3.08-.74.9-1.99 1.57-2.99 1.57-.12 0-.23-.02-.3-.03-.01-.06-.04-.22-.04-.39 0-1.15.57-2.27 1.2-2.98.81-.94 2.15-1.64 3.25-1.68.03.13.06.28.06.43zm4.56 15.71c-.03.07-.46 1.58-1.52 3.12-.94 1.34-1.93 2.71-3.43 2.71-1.51 0-1.9-.88-3.63-.88-1.7 0-2.3.91-3.67.91-1.38 0-2.33-1.26-3.43-2.8C4 18.38 2.95 15.57 2.95 12.92c0-4.28 2.8-6.55 5.55-6.55 1.45 0 2.68.95 3.6.95.87 0 2.22-1.01 3.9-1.01.62 0 2.89.06 4.38 2.19-.13.09-2.38 1.37-2.38 4.19 0 3.26 2.85 4.42 2.95 4.45z"/></symbol>
+  <symbol id="coins" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="7" ry="2.6"/><path d="M5 6v4c0 1.4 3.1 2.6 7 2.6s7-1.2 7-2.6V6"/><path d="M5 10v4c0 1.4 3.1 2.6 7 2.6s7-1.2 7-2.6v-4"/><path d="M5 14v4c0 1.4 3.1 2.6 7 2.6s7-1.2 7-2.6v-4"/></g></symbol>
+</svg>
+
+<header class="nav">
+  <nav class="nav-inner" aria-label="Main">
+    <a class="brand" href="/"><span class="mark" style="color:var(--ink)"><svg aria-hidden="true"><use href="#coins"/></svg></span>Hoard</a>
+    <ul class="nav-links">
+      <li><a href="/#features">Features</a></li>
+      <li><a href="/#guides">Guides</a></li>
+      <li><a href="/#faq">Questions</a></li>
+      <li><a href="mailto:support@hoardapp.co.uk">Contact</a></li>
+    </ul>
+    <a class="dl" href="/#get"><svg aria-hidden="true"><use href="#apple"/></svg>Download</a>
+  </nav>
+</header>
+
+<main class="doc">
+  <p class="eyebrow">Privacy policy</p>
+  <h1>Your money stays on your phone</h1>
+  <p class="updated">Last updated 23 October 2026</p>
+
+  <div class="short">
+    <h2>The short version</h2>
+    <ul>
+      <li>Hoard has no account and no server. Your salary, payslips, pension figures and budget are stored on your iPhone and nowhere else.</li>
+      <li>We never see your financial information. It is never sent to us.</li>
+      <li>The only outside service the app talks to is RevenueCat, which handles Hoard Pro purchases. It sees an anonymous ID and what you bought, never your finances.</li>
+      <li>No ads, no tracking, no analytics, and we never sell or share your data.</li>
+    </ul>
+  </div>
+
+  <ol class="toc" aria-label="Contents">
+    <li><a href="#who">Who we are</a></li>
+    <li><a href="#on-device">What stays on your phone</a></li>
+    <li><a href="#scanning">Scanning payslips and statements</a></li>
+    <li><a href="#chat">Chat and Apple Intelligence</a></li>
+    <li><a href="#reminders">Reminders</a></li>
+    <li><a href="#purchases">Buying Hoard Pro</a></li>
+    <li><a href="#dont">What we don't do</a></li>
+    <li><a href="#email">If you email us</a></li>
+    <li><a href="#website">This website</a></li>
+    <li><a href="#links">Links to other sites</a></li>
+    <li><a href="#legal">Legal basis and transfers</a></li>
+    <li><a href="#rights">Your rights</a></li>
+    <li><a href="#children">Children</a></li>
+    <li><a href="#changes">Changes to this policy</a></li>
+  </ol>
+
+  <section id="who">
+    <h2>Who we are</h2>
+    <p>Hoard is a UK pension and budget app for iPhone. In this policy, “Hoard”, “we” and “us” mean the people who make the app and run this website. It covers the Hoard app and hoardapp.co.uk.</p>
+    <p>If you have a question about your privacy, email <a href="mailto:support@hoardapp.co.uk">support@hoardapp.co.uk</a>.</p>
+  </section>
+
+  <section id="on-device">
+    <h2>What stays on your phone</h2>
+    <p>To work out your take-home pay, budget, pension boost and retirement check, Hoard uses information you give it, such as:</p>
+    <ul>
+      <li>your salary, tax code and pension contribution rates</li>
+      <li>figures read from payslips and pension statements you scan</li>
+      <li>your pension pots, guaranteed (final salary) pensions and State Pension details</li>
+      <li>your monthly budget and any one-off costs you add</li>
+      <li>your age, retirement goals, reminder choices, your pal and its name</li>
+      <li>questions you ask your pal in the chat</li>
+    </ul>
+    <p>All of this is stored in the app's private storage on your iPhone. <strong>It is not sent to us or to anyone else.</strong> Every calculation happens on your device.</p>
+    <p>If iCloud Backup is turned on, your iPhone's backup includes Hoard's data, so it comes back if you restore to a new phone. Apple handles iCloud backups under <a href="https://www.apple.com/legal/privacy/" rel="noopener">Apple's privacy policy</a>; we can't see them.</p>
+    <p>You can remove everything at any time with <strong>Settings → Erase all my data</strong> in the app, or by deleting the app.</p>
+  </section>
+
+  <section id="scanning">
+    <h2>Scanning payslips and statements</h2>
+    <p>When you scan a payslip or pension statement, Hoard asks to use your camera, or lets you pick a photo from your library. The text is read on your iPhone using Apple's built-in text recognition, and Hoard keeps only the figures it pulls out. <strong>The photo itself is not saved by Hoard and never leaves your phone.</strong></p>
+    <p>Hoard only asks for camera or photo access when you choose to scan. You can change this at any time in your iPhone's Settings.</p>
+  </section>
+
+  <section id="chat">
+    <h2>Chat and Apple Intelligence</h2>
+    <p>On iPhones that support Apple Intelligence, your pal uses Apple's on-device language model to answer questions about your figures. Your questions and figures are processed on your iPhone and are not sent to us or to any other AI service. On other iPhones, your pal uses answers built into the app.</p>
+    <p>Answers from the chat are information, not financial advice. See our <a href="/terms">Terms of Use</a>.</p>
+  </section>
+
+  <section id="reminders">
+    <h2>Reminders</h2>
+    <p>Payday, pay review, tax year and other reminders are scheduled on your iPhone as local notifications. They don't go through a server, and we don't receive anything when they're delivered. You can turn each one off in the app's Settings, or turn notifications off in your iPhone's Settings.</p>
+  </section>
+
+  <section id="purchases">
+    <h2>Buying Hoard Pro</h2>
+    <p>Hoard Pro is bought through the App Store. <strong>Apple takes the payment</strong>, so we never see your card or bank details. Apple's handling of your purchase is covered by <a href="https://www.apple.com/legal/privacy/" rel="noopener">Apple's privacy policy</a>.</p>
+    <p>To check what you've bought and unlock Pro, the app uses <a href="https://www.revenuecat.com/" rel="noopener">RevenueCat</a>, a subscription service. RevenueCat receives:</p>
+    <ul>
+      <li>a random, anonymous ID created by the app on your iPhone</li>
+      <li>your purchase and subscription history for Hoard, including App Store transaction details</li>
+      <li>your App Store country and currency, so the right prices are shown</li>
+      <li>technical details such as your iPhone model, iOS version and when you last opened the app, plus your IP address, which any internet connection reveals</li>
+    </ul>
+    <p>We use this to unlock Hoard Pro, let you restore purchases on a new phone, prevent fraud, and see overall sales figures. The anonymous ID is not linked to your name, email address or Apple Account, because Hoard never asks for them. RevenueCat never receives any of your financial information.</p>
+    <p>RevenueCat processes this information on our behalf, under a data processing agreement, and only as we instruct. You can read more in <a href="https://www.revenuecat.com/privacy" rel="noopener">RevenueCat's privacy policy</a>.</p>
+  </section>
+
+  <section id="dont">
+    <h2>What we don't do</h2>
+    <ul>
+      <li>We don't ask for your bank login or connect to your bank.</li>
+      <li>We don't show ads or use advertising identifiers.</li>
+      <li>We don't track you across other apps or websites.</li>
+      <li>We don't include analytics or crash-reporting tools in the app.</li>
+      <li>We don't sell, rent or share your information.</li>
+    </ul>
+  </section>
+
+  <section id="email">
+    <h2>If you email us</h2>
+    <p>If you contact <a href="mailto:support@hoardapp.co.uk">support@hoardapp.co.uk</a>, we receive your email address and whatever you choose to write. We use it only to reply to you, and keep it only as long as we need to help. Please don't send us payslips or other documents unless we ask for something specific to fix a problem.</p>
+  </section>
+
+  <section id="website">
+    <h2>This website</h2>
+    <p>hoardapp.co.uk doesn't use cookies, analytics or tracking pixels. The site's fonts load from Google Fonts, so your browser connects to Google, which receives your IP address under <a href="https://policies.google.com/privacy" rel="noopener">Google's privacy policy</a>. Like any website, our hosting provider may keep short-lived server logs for security.</p>
+  </section>
+
+  <section id="links">
+    <h2>Links to other sites</h2>
+    <p>Hoard links to free official services such as GOV.UK, HMRC and MoneyHelper, and to some pension providers. These open in a browser view inside the app. What those sites collect is covered by their own privacy policies, not this one.</p>
+  </section>
+
+  <section id="legal">
+    <h2>Legal basis and transfers</h2>
+    <p>UK data protection law applies to the small amount of personal information we handle:</p>
+    <ul>
+      <li><strong>Purchase information</strong> processed through RevenueCat: to provide what you've paid for (performing our contract with you), and our legitimate interests in preventing fraud and understanding sales.</li>
+      <li><strong>Support emails</strong>: our legitimate interest in answering your questions.</li>
+    </ul>
+    <p>RevenueCat is based in the United States and stores purchase information on servers there. Transfers outside the UK are covered by RevenueCat's <a href="https://www.revenuecat.com/dpa" rel="noopener">data processing addendum</a>.</p>
+  </section>
+
+  <section id="rights">
+    <h2>Your rights</h2>
+    <p>You have the right to ask for a copy of personal information we hold about you, and to have it corrected or deleted. You can also object to how we use it, or ask us to restrict it.</p>
+    <p>Your financial information is only on your phone, so you already control it: you can view it, change it or erase it in the app at any time.</p>
+    <p>For purchase records held by RevenueCat, email <a href="mailto:support@hoardapp.co.uk">support@hoardapp.co.uk</a>. Because these records are anonymous, we may need your help to find yours, for example the date you bought Pro or the order ID from Apple's receipt email. We'll respond within one month.</p>
+    <p>If you're unhappy with how we've handled your information, you can complain to the <a href="https://ico.org.uk/make-a-complaint/data-protection-complaints/" rel="noopener">Information Commissioner's Office</a>. We'd appreciate the chance to put it right first.</p>
+  </section>
+
+  <section id="children">
+    <h2>Children</h2>
+    <p>Hoard is designed for adults managing UK pay, tax and pensions. It isn't aimed at children, and we don't knowingly collect information from them.</p>
+  </section>
+
+  <section id="changes">
+    <h2>Changes to this policy</h2>
+    <p>If we change how Hoard handles information, we'll update this page and the date at the top. If a change is significant, for example adding a new service that receives data from the app, we'll explain it in the app's update notes before it takes effect.</p>
+  </section>
+
+  <div class="contact">
+    <p><strong>Questions?</strong> Email <a href="mailto:support@hoardapp.co.uk">support@hoardapp.co.uk</a> and a real person will reply.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> Hoard. Made in the UK.</span>
+    <ul>
+      <li><a href="/privacy" aria-current="page">Privacy</a></li>
+      <li><a href="/terms">Terms</a></li>
+      <li><a href="mailto:support@hoardapp.co.uk">support@hoardapp.co.uk</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
