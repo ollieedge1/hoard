@@ -107,6 +107,11 @@ h1 em{font-style:normal;color:var(--accent)}
 .hero .phone{width:min(330px,80vw);justify-self:center;animation:rise 1s cubic-bezier(.2,.8,.2,1) both .1s}
 @keyframes rise{from{opacity:0;transform:translateY(60px)}to{opacity:1;transform:none}}
 
+/* real app screens, rendered from the app's design */
+.phone.shot{aspect-ratio:auto}
+.phone.shot .screen{height:auto;padding:0;display:block;background:#F5F5F0}
+.phone.shot .screen img{display:block;width:100%;height:auto}
+
 .s-title{font:800 19px var(--display);letter-spacing:-.01em;margin:0 2px 2px}
 .s-card{background:#1C1C1E;border-radius:15px;padding:11px 12px}
 .s-lab{font-size:10px;font-weight:700;color:#A1A1A6;margin-bottom:3px}
@@ -198,6 +203,7 @@ h1 em{font-style:normal;color:var(--accent)}
 .c-bud .stage{position:relative;align-self:stretch;min-height:388px}
 .c-bud .phone{position:absolute;width:250px;left:50%;top:30px;transform:translateX(-50%) rotate(-3deg)}
 .c-bud .big{font:800 clamp(40px,5vw,64px)/.95 var(--display);letter-spacing:-.025em;margin-bottom:18px;color:var(--linen);max-width:none}
+.c-chat .phone{transform:translateX(-50%) rotate(3deg)}
 
 /* guides + privacy: half cards */
 .halves{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px}
@@ -316,26 +322,7 @@ footer a:hover{color:var(--linen)}
         <a class="dl appstore" href="#get"><svg aria-hidden="true"><use href="#apple"/></svg>Download</a>
         <p class="fine">Free on iPhone. No account, nothing leaves your phone.</p>
       </div>
-      <div class="phone" role="img" aria-label="Hoard home screen showing on-track progress and the checklist">
-        <div class="screen" aria-hidden="true">
-          <div class="s-title">Home</div>
-          <div class="s-tiles">
-            <div class="s-tile"><i><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></i>Do your savings match your life?</div>
-            <div class="s-tile"><i><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></i>Do you have pensions elsewhere?</div>
-          </div>
-          <div class="s-card">
-            <div class="s-lab">Worth it later?</div>
-            <div class="s-big acc">£4,380</div>
-            <div class="s-sub">£500 today, at 67, in today's money</div>
-          </div>
-          <div class="s-card">
-            <div class="s-lab" style="margin-bottom:9px">Checklist</div>
-            <div class="s-row"><span class="s-tick on"></span>Create your monthly budget</div>
-            <div class="s-row"><span class="s-tick on"></span>Boost your pension</div>
-            <div class="s-row"><span class="s-tick"></span>Are you on track?</div>
-          </div>
-        </div>
-      </div>
+      <div class="phone shot"><div class="screen"><img src="images/screen-home.webp" width="640" height="1391" alt="Hoard home screen: your pal, £330 left this month, and quick links to Retirement and Budget" fetchpriority="high" decoding="async"></div></div>
     </div>
   </section>
 
@@ -344,12 +331,12 @@ footer a:hover{color:var(--linen)}
       <div class="grid">
 
         <article class="card c-check">
-          <h2>Three things, then you're set</h2>
+          <h2>Three steps to get on track</h2>
           <p>No bank login, no forms. Tell Hoard your <strong>salary and pension percentage</strong> and everything else follows.</p>
           <div class="rows" aria-hidden="true">
-            <div class="row"><i class="sw"><svg viewBox="0 0 24 24"><path d="M21 12A9 9 0 1 1 12 3v9z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15z"/></svg></i><div><b>Monthly budget</b><span>What's genuinely left</span></div><em class="val">£609</em></div>
-            <div class="row"><i class="sw"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></i><div><b>Boost your pension</b><span>The rate that fits</span></div><em class="val">8.5%</em></div>
-            <div class="row"><i class="sw"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></i><div><b>Are you on track?</b><span>Retirement at 67</span></div><em class="val gold">43%</em></div>
+            <div class="row"><i class="sw"><svg viewBox="0 0 24 24"><path d="M21 12A9 9 0 1 1 12 3v9z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15z"/></svg></i><div><b>Monthly budget</b><span>What's genuinely left</span></div><em class="val">£438</em></div>
+            <div class="row"><i class="sw"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></i><div><b>Boost your pension</b><span>The rate that fits</span></div><em class="val">12.0%</em></div>
+            <div class="row"><i class="sw"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></i><div><b>Are you on track?</b><span>Retirement at 67</span></div><em class="val gold">Moderate</em></div>
           </div>
         </article>
 
@@ -360,29 +347,9 @@ footer a:hover{color:var(--linen)}
             <a class="more" href="#faq">How the boost works</a>
           </div>
           <div class="stage" aria-hidden="true">
-            <div class="phone">
-              <div class="screen">
-                <div class="s-title">Boost</div>
-                <div class="s-card">
-                  <div class="s-lab">Your goal</div>
-                  <div style="font-size:12px;font-weight:800">Avoid Higher Rate</div>
-                  <div class="s-sub" style="margin-top:2px">Keep income below £50,270</div>
-                </div>
-                <div class="s-card" style="text-align:center;padding:14px 12px">
-                  <div class="s-lab">INCREASE YOUR CONTRIBUTION TO</div>
-                  <div class="s-big acc" style="font-size:30px;margin:6px 0 3px">8.5%</div>
-                  <div class="s-sub">from your current 5.0%</div>
-                </div>
-                <div class="s-card">
-                  <div class="s-lab" style="margin-bottom:8px">Make it happen</div>
-                  <div class="s-row"><span class="s-tick on"></span>Tell payroll</div>
-                  <div class="s-row"><span class="s-tick"></span>Ask about salary sacrifice</div>
-                  <div class="s-row"><span class="s-tick"></span>Check it landed</div>
-                </div>
-              </div>
-            </div>
-            <div class="chip a"><span><b>Higher rate avoided</b>40% band cleared</span><span class="pct">£50,270</span></div>
-            <div class="chip b"><span><b>Your contribution</b>5.0% to 8.5%</span><span class="pct">+3.5%</span></div>
+            <div class="phone shot"><div class="screen"><img src="images/screen-boost.webp" width="640" height="1391" alt="" loading="lazy" decoding="async"></div></div>
+            <div class="chip a"><span><b>Less tax and NI</b>Every month, on £45,000</span><span class="pct">£74</span></div>
+            <div class="chip b"><span><b>Your contribution</b>5.0% to 12.0%</span><span class="pct">+7%</span></div>
           </div>
         </article>
 
@@ -392,30 +359,8 @@ footer a:hover{color:var(--linen)}
             <p>Your pension pot as a hoard of gold that stacks a little higher every month. <strong>Scrub forward in time</strong> and see what it becomes by the day you stop.</p>
           </div>
           <div class="stage" aria-hidden="true">
-            <div class="phone">
-              <div class="screen">
-                <div class="s-title">Hoard</div>
-                <div class="s-card"><div class="s-lab">Today · 34</div><div class="s-big gold">£38,420</div></div>
-                <div class="pile">
-                  <i style="bottom:0;left:26%"></i><i style="bottom:0;left:50%"></i>
-                  <i style="bottom:9px;left:38%"></i>
-                </div>
-              </div>
-            </div>
-            <div class="phone">
-              <div class="screen">
-                <div class="s-title">Hoard</div>
-                <div class="s-card"><div class="s-lab">Retirement · 67</div><div class="s-big gold">£412,000</div></div>
-                <div class="pile">
-                  <i style="bottom:0;left:4%"></i><i style="bottom:0;left:24%"></i><i style="bottom:0;left:44%"></i><i style="bottom:0;left:64%"></i>
-                  <i style="bottom:9px;left:14%"></i><i style="bottom:9px;left:34%"></i><i style="bottom:9px;left:54%"></i>
-                  <i style="bottom:18px;left:22%"></i><i style="bottom:18px;left:44%"></i>
-                  <i style="bottom:27px;left:12%"></i><i style="bottom:27px;left:34%"></i><i style="bottom:27px;left:56%"></i>
-                  <i style="bottom:36px;left:24%"></i><i style="bottom:36px;left:46%"></i>
-                  <i style="bottom:45px;left:34%"></i><i style="bottom:54px;left:30%"></i><i style="bottom:63px;left:34%"></i>
-                </div>
-              </div>
-            </div>
+            <div class="phone shot"><div class="screen"><img src="images/screen-hoard-today.webp" width="640" height="1391" alt="" loading="lazy" decoding="async"></div></div>
+            <div class="phone shot"><div class="screen"><img src="images/screen-hoard-67.webp" width="640" height="1391" alt="" loading="lazy" decoding="async"></div></div>
           </div>
         </article>
 
@@ -439,23 +384,17 @@ footer a:hover{color:var(--linen)}
             <p>Your take-home comes from your real payslip or the tax engine, your pension is already counted, and the number at the bottom is <strong>what the month genuinely leaves you</strong>.</p>
           </div>
           <div class="stage" aria-hidden="true">
-            <div class="phone">
-              <div class="screen">
-                <div class="s-title">Monthly Budget</div>
-                <div class="s-card s-inv"><div class="s-lab">Take-Home Pay</div><div class="s-big">£3,100</div></div>
-                <div class="s-card">
-                  <div class="s-row"><span>Rent / mortgage</span><span class="v">£1,200</span></div>
-                  <div class="s-row"><span>Council Tax</span><span class="v">£165</span></div>
-                  <div class="s-row"><span>Food</span><span class="v">£420</span></div>
-                  <div class="s-row"><span>Travel</span><span class="v">£140</span></div>
-                </div>
-                <div class="s-card" style="text-align:center">
-                  <div class="s-lab">Left over each month</div>
-                  <div class="s-big acc" style="font-size:28px">£609</div>
-                  <div class="s-sub">20% of your take-home</div>
-                </div>
-              </div>
-            </div>
+            <div class="phone shot"><div class="screen"><img src="images/screen-budget.webp" width="640" height="1391" alt="" loading="lazy" decoding="async"></div></div>
+          </div>
+        </article>
+
+        <article class="card c-bud c-chat span3">
+          <div class="stage" aria-hidden="true">
+            <div class="phone shot"><div class="screen"><img src="images/screen-chat.webp" width="640" height="1391" alt="" loading="lazy" decoding="async"></div></div>
+          </div>
+          <div>
+            <p class="big">Ask your pal anything</p>
+            <p>Am I spending too much on rent? How much tax could I save? Your pal answers <strong>from your own numbers in Hoard</strong>, right on your phone, then points you to the tool that works it out. Information, not advice.</p>
           </div>
         </article>
       </div>
@@ -464,14 +403,7 @@ footer a:hover{color:var(--linen)}
         <article class="card c-guides">
           <h3>Guides for the moments that matter</h3>
           <p>Rent or buy, which ISA, how to withdraw your pension, money HMRC owes you. Honest answers, with the free official route always signposted.</p>
-          <div class="phone" aria-hidden="true">
-            <div class="screen">
-              <div class="s-title">Guides</div>
-              <div class="s-card"><div class="s-lab">Top Guides</div><div style="font-size:12px;font-weight:800">Should I rent or buy?</div><div class="s-sub">Four questions, one clear answer.</div></div>
-              <div class="s-card"><div style="font-size:12px;font-weight:800">Which ISA is best for me?</div><div class="s-sub">Cash, stocks &amp; shares, or Lifetime.</div></div>
-              <div class="s-card"><div style="font-size:12px;font-weight:800">How do I withdraw my pension?</div><div class="s-sub">When you can, and what's tax-free.</div></div>
-            </div>
-          </div>
+          <div class="phone shot" aria-hidden="true"><div class="screen"><img src="images/screen-guides.webp" width="640" height="1391" alt="" loading="lazy" decoding="async"></div></div>
         </article>
 
         <article class="card c-priv">
